@@ -1,6 +1,6 @@
 # 💡 Histogram Equalization in OpenCV (Python Tutorial)
 ---
-[![main branch](https://img.shields.io/badge/branch-main-red?style=flat&logo=git&logoColor=white)](https://github.com/RH-NAYM/OpenCV-Image-Thresholding/tree/main)
+[![dev branch](https://img.shields.io/badge/branch-dev-red?style=flat&logo=git&logoColor=white)](https://github.com/RH-NAYM/OpenCV-Image-Thresholding/tree/dev)
 #
 
 <p align="center">
@@ -29,11 +29,11 @@ This project provides a comprehensive guide to `Histogram Equalization` using `O
 This repository covers both global methods and advanced local adaptive methods (`CLAHE`) to handle various lighting conditions.
 ---
 
-The Jupyter Notebook demonstrates:
-- Global Histogram Equalization: Enhancing contrast using the entire image's intensity distribution.
-- CLAHE (Contrast Limited Adaptive Histogram Equalization): Solving over-amplification of noise in local regions.
-- Mathematical Intuition: Understanding Cumulative Distribution Functions (CDF).
-- Color Image Processing: Equalizing color images without distorting hues.
+The `Jupyter Notebook` demonstrates:
+- **Global Histogram Equalization:** Enhancing contrast using the entire image's intensity distribution.
+- **CLAHE (Contrast Limited Adaptive Histogram Equalization):** Solving over-amplification of noise in local regions.
+- **Mathematical Intuition:** Understanding Cumulative Distribution Functions (`CDF`).
+- **Color Image Processing:** Equalizing color images without distorting hues.
 
 `Whether you are dealing with medical X-rays, satellite imagery, or low-light photography, this repository serves as a practical toolkit for contrast enhancement.`
 
@@ -66,11 +66,13 @@ The Jupyter Notebook demonstrates:
 
 # 🧠 What You’ll Learn
 ---
-- The Math: How the transform function $h(v)$ uses the CDF to linearize the histogram.
-$$h(v) = \text{round} \left( \frac{cdf(v) - cdf_{min}}{(M \times N) - cdf_{min}} \times (L - 1) \right)$$
-- Global Enhancement: Using cv2.equalizeHist() for images with uniform lighting issues.
-- Local Enhancement: Using cv2.createCLAHE() to prevent noise "blow-up" in dark areas.
-- Histogram Visualization: Using Matplotlib to plot intensity distributions.
+- **The Math:** How the transform function $h(v)$ uses the `CDF` to `linearize` the histogram.
+$$
+h(v) = \text{round} \left( \frac{cdf(v) - cdf_{min}}{(M \times N) - cdf_{min}} \times (L - 1) \right)
+$$
+- **Global Enhancement:** Using `cv2.equalizeHist()` for images with uniform lighting issues.
+- **Local Enhancement:** Using `cv2.createCLAHE()` to prevent noise "blow-up" in dark areas.
+- **Histogram Visualization:** Using `Matplotlib` to plot intensity distributions.
 
 # 🛠️ Technologies Used
 ---
@@ -110,18 +112,18 @@ pip install -r requirements.txt
 
 # ✅ Summary
 ---
-- Histogram Equalization is essential for revealing hidden details in low-contrast images.
-- CLAHE is generally superior for real-world images with non-uniform lighting.
+- Histogram Equalization is essential for revealing hidden details in `low-contrast` images.
+- `CLAHE` is generally superior for real-world images with `non-uniform` lighting.
 - Visualizing the Histogram alongside the image is the best way to debug contrast issues.
-- Always convert color images to a space like LAB or YCrCb before equalizing.
+- Always convert color images to a space like `LAB` or `YCrCb` before equalizing.
 
 
 # 🍴 Real-World Applications
 ---
-- Medical Imaging: Enhancing X-rays and MRI scans to highlight tissue structures.
-- Security: Improving visibility in night-vision or foggy surveillance footage.
-- Satellite Imagery: Balancing contrast in photos taken through atmospheric haze.
-- Face Recognition: Normalizing lighting conditions before feature extraction.
+- **Medical Imaging:** Enhancing `X-rays` and `MRI` scans to highlight tissue structures.
+- **Security:** Improving visibility in `night-vision` or `foggy` surveillance footage.
+- **Satellite Imagery:** Balancing contrast in photos taken through `atmospheric haze`.
+- **Face Recognition:** `Normalizing` lighting conditions before feature extraction.
 
 # 📝 Contribution
 `Feel free to open an issue or submit a pull request to add more advanced contrast stretching techniques or multi-spectral image examples.`
